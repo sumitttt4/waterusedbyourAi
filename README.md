@@ -20,6 +20,51 @@ Large language models require high-density compute clusters. These clusters cons
 - Accessible Banners: Status notifications that summarize chat footprint intensity.
 - Complete Privacy: Runs 100% locally in the browser with zero external network requests.
 
+## How to Install and Use
+
+Depending on your background, choose one of the two setup paths below:
+
+### Option A: For Users (Quick Setup - No Code Required)
+
+If you are not a developer and want to run the extension immediately:
+
+1. Go to the "Releases" section on the right side of this GitHub repository page.
+2. Download the latest pre-compiled `waterusedbyourAi.zip` file.
+3. Extract the downloaded ZIP file to a folder on your computer.
+4. Open your browser and navigate to the Extensions page:
+   - For Google Chrome: chrome://extensions
+   - For Microsoft Edge: edge://extensions
+5. Enable Developer Mode (using the toggle switch in the top-right corner).
+6. Click the "Load unpacked" button in the top-left corner.
+7. Select the folder where you extracted the ZIP file.
+8. Open ChatGPT, Claude, Gemini, or Perplexity and start a conversation. The widget will display under completed replies.
+
+### Option B: For Developers (Compile from Source)
+
+If you are a developer and want to modify or compile the code:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/sumitttt4/waterusedbyourAi.git
+   cd waterusedbyourAi
+   ```
+
+2. Install the dependencies and compile the workspace:
+   ```bash
+   npm install
+   ```
+
+3. Build the browser extension:
+   ```bash
+   npm run build:ext
+   ```
+   This generates the compiled bundle in `surfaces/browser-extension/dist/content.js`.
+
+4. Load the unpacked extension:
+   - Open your browser's Extensions page (`chrome://extensions` or `edge://extensions`).
+   - Enable Developer Mode.
+   - Click "Load unpacked" and select the `surfaces/browser-extension` subdirectory in this project folder.
+
 ## Project Architecture
 
 The project is structured as a monorepo using npm workspaces:
@@ -29,33 +74,6 @@ The project is structured as a monorepo using npm workspaces:
 - surfaces/cli: A CLI integration script for terminal toolkits (such as Claude Code) to output session footprints.
 - surfaces/api-wrapper: A node helper to analyze LLM API response usage payloads programmatically.
 - plugins/: Pluggable providers (such as plugins/provider-xai) that register model coefficients dynamically without touching the core engine.
-
-## Installation
-
-To load the extension in your browser:
-
-1. Clone the repository and install the development dependencies:
-   ```bash
-   npm install
-   ```
-
-2. Build the browser extension surface:
-   ```bash
-   npm run build:ext
-   ```
-
-3. Open your browser and navigate to the Extensions page:
-   - For Google Chrome: chrome://extensions
-   - For Microsoft Edge: edge://extensions
-
-4. Enable Developer Mode (usually a toggle in the top-right corner).
-
-5. Click "Load unpacked" and select the following subdirectory from this project folder:
-   ```
-   surfaces/browser-extension
-   ```
-
-6. Navigate to ChatGPT, Claude, Gemini, or Perplexity and start a conversation. The widget will display under the completed replies.
 
 ## Development and Verification
 
