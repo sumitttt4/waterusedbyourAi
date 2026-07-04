@@ -1,0 +1,17 @@
+{
+  "name": "@waterusedbyourai/cli",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Claude Code integration: a statusline + hook that show the water/energy footprint of the current session.",
+  "type": "module",
+  "bin": {
+    "waterusedbyourai-statusline": "./dist/statusline.mjs"
+  },
+  "main": "./src/statusline.ts",
+  "scripts": {
+    "build": "node esbuild.mjs"
+  },
+  "dependencies": {
+    "@waterusedbyourai/core": "*"
+  }
+}

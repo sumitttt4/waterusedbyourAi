@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.tmp/
+*.tsbuildinfo
+.DS_Store
+.playwright-mcp/
+surfaces/browser-extension/live-claude.png
+surfaces/browser-extension/thirsty.zip
+surfaces/browser-extension/.package/
+docs/store/

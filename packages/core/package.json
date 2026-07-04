@@ -1,0 +1,14 @@
+{
+  "name": "@waterusedbyourai/core",
+  "version": "0.1.0",
+  "description": "Estimation engine: tokens -> energy -> water/CO2 for AI prompts. Provider & grid coefficients in a pluggable registry.",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -b --pretty"
+  }
+}

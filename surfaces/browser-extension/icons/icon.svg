@@ -1,0 +1,17 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="128" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="drop" x1="44" y1="24" x2="84" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#e6f4ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+  <!-- water drop -->
+  <path d="M64 22 C64 22 38 56 38 78 a26 26 0 0 0 52 0 C90 56 64 22 64 22 Z" fill="url(#drop)"/>
+  <!-- subtle highlight -->
+  <ellipse cx="54" cy="80" rx="7" ry="11" fill="#ffffff" opacity="0.55"/>
+</svg>
